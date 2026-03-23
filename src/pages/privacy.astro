@@ -1,0 +1,173 @@
+---
+import Layout from '../layouts/Layout.astro';
+import '../styles/global.css';
+---
+
+<Layout title="Privacy Policy — Kiku" description="Privacy policy for Kiku and Kiku Studio Android apps.">
+  <article class="privacy">
+    <h1>Privacy Policy</h1>
+    <p class="updated">Last updated: March 23, 2026</p>
+
+    <p>
+      This privacy policy applies to <strong>Kiku</strong> (podcast player) and <strong>Kiku Studio</strong>
+      (podcast recording studio), both developed by Wharfe ("we", "us", "our").
+    </p>
+
+    <h2>Data We Collect</h2>
+
+    <h3>Kiku (Podcast Player)</h3>
+    <ul>
+      <li><strong>Podcast subscriptions and playback data</strong> — stored locally on your device only. We do not sync, upload, or access your subscription list.</li>
+      <li><strong>Podcast search queries</strong> — sent to the Podcast Index API to return search results. We do not log or store these queries.</li>
+      <li><strong>AI summaries (optional)</strong> — if you use the AI summary feature, episode metadata may be sent to a third-party AI provider (Anthropic Claude API). This feature requires you to provide your own API key (BYOK). We never see or store your API key on our servers.</li>
+    </ul>
+
+    <h3>Kiku Studio (Podcast Studio)</h3>
+    <ul>
+      <li><strong>Audio recordings</strong> — stored locally on your device only. We never upload, access, or process your recordings on any server.</li>
+      <li><strong>Transcription (optional)</strong> — if you use the transcription feature, your audio is sent to the OpenAI Whisper API. This feature requires you to provide your own API key (BYOK). We never see or store your API key on our servers.</li>
+      <li><strong>AI processing (noise reduction, normalization, VAD)</strong> — performed entirely on-device. No audio data leaves your device for these features.</li>
+    </ul>
+
+    <h2>Bring Your Own Key (BYOK)</h2>
+    <p>
+      Both apps support optional AI features that require third-party API keys. When you provide an API key:
+    </p>
+    <ul>
+      <li>The key is stored locally on your device only (in app-private storage).</li>
+      <li>The key is sent directly from your device to the third-party API provider. It never passes through our servers.</li>
+      <li>You are responsible for your own API usage and costs with the third-party provider.</li>
+      <li>You can remove your API key at any time in Settings.</li>
+    </ul>
+
+    <h2>Crash Reporting</h2>
+    <p>
+      We use Firebase Crashlytics to collect anonymous crash reports. This helps us identify and fix bugs.
+      Crash reports include:
+    </p>
+    <ul>
+      <li>Device model and Android version</li>
+      <li>App version</li>
+      <li>Stack trace of the crash</li>
+      <li>General device state (memory, storage)</li>
+    </ul>
+    <p>Crash reports do <strong>not</strong> include any personal information, audio content, or API keys.</p>
+
+    <h2>Third-Party Services</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Service</th>
+          <th>Purpose</th>
+          <th>Data Sent</th>
+          <th>Required?</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Podcast Index API</td>
+          <td>Podcast search & discovery (Kiku)</td>
+          <td>Search queries</td>
+          <td>For search only</td>
+        </tr>
+        <tr>
+          <td>OpenAI Whisper API</td>
+          <td>Transcription (Kiku Studio)</td>
+          <td>Audio data + your API key</td>
+          <td>Optional (BYOK)</td>
+        </tr>
+        <tr>
+          <td>Anthropic Claude API</td>
+          <td>AI summaries (Kiku)</td>
+          <td>Episode metadata + your API key</td>
+          <td>Optional (BYOK)</td>
+        </tr>
+        <tr>
+          <td>Firebase Crashlytics</td>
+          <td>Crash reporting</td>
+          <td>Anonymous crash data</td>
+          <td>Automatic</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>Data Storage</h2>
+    <p>
+      All user data (recordings, subscriptions, settings, API keys) is stored locally on your device.
+      We do not operate any servers that store user data. We do not have user accounts.
+    </p>
+
+    <h2>Children's Privacy</h2>
+    <p>
+      Our apps are not directed at children under 13. We do not knowingly collect personal information from children.
+    </p>
+
+    <h2>Changes to This Policy</h2>
+    <p>
+      We may update this privacy policy from time to time. Changes will be posted on this page
+      with an updated "Last updated" date.
+    </p>
+
+    <h2>Contact</h2>
+    <p>
+      If you have questions about this privacy policy, contact us at
+      <a href="mailto:support@wharfe.com">support@wharfe.com</a>.
+    </p>
+  </article>
+</Layout>
+
+<style>
+  .privacy {
+    padding: 4rem 0;
+    max-width: 720px;
+  }
+  .privacy h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+  .updated {
+    color: var(--color-on-surface-variant);
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+  }
+  .privacy h2 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+  }
+  .privacy h3 {
+    font-size: 1.05rem;
+    font-weight: 600;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  .privacy p, .privacy li {
+    color: var(--color-on-surface-variant);
+    font-size: 0.95rem;
+    margin-bottom: 0.75rem;
+  }
+  .privacy ul {
+    padding-left: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  .privacy table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+    font-size: 0.9rem;
+  }
+  .privacy th, .privacy td {
+    text-align: left;
+    padding: 0.5rem 0.75rem;
+    border-bottom: 1px solid var(--color-surface-variant);
+  }
+  .privacy th {
+    font-weight: 600;
+    color: var(--color-on-surface);
+  }
+  .privacy td {
+    color: var(--color-on-surface-variant);
+  }
+</style>

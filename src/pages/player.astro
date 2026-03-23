@@ -1,0 +1,129 @@
+---
+import Layout from '../layouts/Layout.astro';
+import '../styles/global.css';
+---
+
+<Layout title="Kiku — Smart Podcast Player for Android" description="Podcast player with Smart Speed, Voice Boost, AI summaries, and Podcast 2.0 chapters. Built natively for Android.">
+  <section class="hero">
+    <div class="hero-badge">Podcast Player</div>
+    <h1>Your podcasts,<br/>your way.</h1>
+    <p class="hero-sub">
+      A smart podcast player for Android, inspired by the best of iOS.
+      Smart Speed, Voice Boost, and AI-powered summaries.
+    </p>
+    <!-- <a href="https://play.google.com/store/apps/details?id=io.github.wharfe.kiku" class="cta">Get on Google Play</a> -->
+    <p class="coming-soon">Coming soon to Google Play</p>
+  </section>
+
+  <section class="features">
+    <div class="feature">
+      <div class="feature-icon">&#x23E9;</div>
+      <h3>Smart Speed</h3>
+      <p>Automatically trims silence without changing pitch. Save hours of listening time every week.</p>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">&#x1F50A;</div>
+      <h3>Voice Boost</h3>
+      <p>EQ optimized for spoken word. Hear every word clearly, even in noisy environments.</p>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">&#x1F916;</div>
+      <h3>AI Summaries</h3>
+      <p>Get AI-generated episode summaries so you can decide what to listen to before pressing play.</p>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">&#x1F4D1;</div>
+      <h3>Podcast 2.0 Chapters</h3>
+      <p>Full support for enhanced chapters with images. Jump to any section of an episode instantly.</p>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">&#x1F310;</div>
+      <h3>Open Ecosystem</h3>
+      <p>Subscribe via RSS, Podcast Index, or OPML import. Your podcasts, not locked to any platform.</p>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">&#x1F3A8;</div>
+      <h3>Material Design 3</h3>
+      <p>Beautiful, native Android UI. Dark mode, dynamic colors, and smooth animations throughout.</p>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <h2>Also check out</h2>
+    <p><a href="/studio">Kiku Studio</a> — record and produce your own podcast, right on your Android phone.</p>
+  </section>
+</Layout>
+
+<style>
+  .hero {
+    padding: 6rem 0 4rem;
+    text-align: center;
+  }
+  .hero-badge {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    border-radius: 2rem;
+    background: var(--color-primary-container);
+    color: var(--color-on-primary-container);
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+  }
+  .hero h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 700;
+    line-height: 1.1;
+  }
+  .hero-sub {
+    margin-top: 1.5rem;
+    font-size: 1.1rem;
+    color: var(--color-on-surface-variant);
+    max-width: 540px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .coming-soon {
+    margin-top: 2rem;
+    font-size: 0.95rem;
+    color: var(--color-primary);
+    font-weight: 600;
+  }
+
+  .features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    padding: 2rem 0 4rem;
+  }
+  .feature {
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    background: var(--color-surface-variant);
+  }
+  .feature-icon {
+    font-size: 2rem;
+    margin-bottom: 0.75rem;
+  }
+  .feature h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+  .feature p {
+    color: var(--color-on-surface-variant);
+    font-size: 0.9rem;
+  }
+
+  .cta-section {
+    padding: 3rem 0;
+    text-align: center;
+  }
+  .cta-section h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+  }
+  .cta-section p {
+    color: var(--color-on-surface-variant);
+  }
+</style>

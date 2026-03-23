@@ -1,0 +1,56 @@
+/* Kiku Brand — Warm Amber #E8820C */
+:root {
+  --color-primary: #8B5000;
+  --color-primary-light: #E8820C;
+  --color-primary-container: #FFDCBE;
+  --color-on-primary: #FFFFFF;
+  --color-on-primary-container: #2D1600;
+  --color-surface: #FFFBFF;
+  --color-on-surface: #201B16;
+  --color-surface-variant: #F2DFD1;
+  --color-on-surface-variant: #51453A;
+  --color-outline: #837568;
+  --color-amber-glow: #FFB870;
+  --color-bg-dark: #201B16;
+  --color-on-bg-dark: #ECE0D8;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-primary: #FFB870;
+    --color-primary-container: #6A3C00;
+    --color-on-primary: #4A2800;
+    --color-on-primary-container: #FFDCBE;
+    --color-surface: #201B16;
+    --color-on-surface: #ECE0D8;
+    --color-surface-variant: #51453A;
+    --color-on-surface-variant: #D5C3B5;
+    --color-outline: #9E8E81;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color: var(--color-on-surface);
+  background: var(--color-surface);
+  scroll-behavior: smooth;
+}
+
+body {
+  line-height: 1.6;
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}

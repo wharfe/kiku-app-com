@@ -1,0 +1,140 @@
+---
+import Layout from '../layouts/Layout.astro';
+import '../styles/global.css';
+---
+
+<Layout title="Kiku — Podcast Tools for Android">
+  <section class="hero">
+    <h1>Listen smarter.<br/>Record better.</h1>
+    <p class="hero-sub">
+      Kiku is a family of podcast apps for Android.
+      Whether you listen or create, we've got you covered.
+    </p>
+  </section>
+
+  <section class="apps">
+    <a href="/player" class="app-card">
+      <div class="app-icon">&#x1F3A7;</div>
+      <h2>Kiku</h2>
+      <p class="app-tagline">Podcast Player</p>
+      <p>Smart Speed, Voice Boost, and AI summaries. The podcast player that respects your time.</p>
+      <span class="app-link">Learn more &rarr;</span>
+    </a>
+
+    <a href="/studio" class="app-card">
+      <div class="app-icon">&#x1F399;</div>
+      <h2>Kiku Studio</h2>
+      <p class="app-tagline">Podcast Studio</p>
+      <p>Record, clean, edit, and publish — all on your Android phone. AI-powered noise reduction in one tap.</p>
+      <span class="app-link">Learn more &rarr;</span>
+    </a>
+  </section>
+
+  <section class="why">
+    <h2>Why Kiku?</h2>
+    <div class="features">
+      <div class="feature">
+        <h3>Android-first</h3>
+        <p>Built natively for Android with Material Design 3. No iOS port — designed for the platform you use.</p>
+      </div>
+      <div class="feature">
+        <h3>AI-powered</h3>
+        <p>On-device AI for noise reduction, silence trimming, and smart playback. No cloud costs, no privacy concerns.</p>
+      </div>
+      <div class="feature">
+        <h3>Made for the world</h3>
+        <p>Designed for podcasters and journalists everywhere — from Jakarta to Mumbai to Mexico City.</p>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .hero {
+    padding: 6rem 0 4rem;
+    text-align: center;
+  }
+  .hero h1 {
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    font-weight: 700;
+    line-height: 1.1;
+    color: var(--color-on-surface);
+  }
+  .hero-sub {
+    margin-top: 1.5rem;
+    font-size: 1.2rem;
+    color: var(--color-on-surface-variant);
+    max-width: 540px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .apps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    padding: 2rem 0 4rem;
+  }
+  .app-card {
+    display: block;
+    padding: 2rem;
+    border-radius: 1rem;
+    background: var(--color-surface-variant);
+    text-decoration: none;
+    color: var(--color-on-surface);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .app-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+    text-decoration: none;
+  }
+  .app-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  .app-card h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+  .app-tagline {
+    font-size: 0.9rem;
+    color: var(--color-primary);
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+  }
+  .app-card p {
+    color: var(--color-on-surface-variant);
+    font-size: 0.95rem;
+  }
+  .app-link {
+    display: inline-block;
+    margin-top: 1rem;
+    color: var(--color-primary);
+    font-weight: 600;
+    font-size: 0.9rem;
+  }
+  .why {
+    padding: 2rem 0 4rem;
+  }
+  .why h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  .features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 2rem;
+  }
+  .feature h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--color-primary);
+  }
+  .feature p {
+    color: var(--color-on-surface-variant);
+    font-size: 0.95rem;
+  }
+</style>

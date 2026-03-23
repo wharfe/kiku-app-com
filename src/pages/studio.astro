@@ -1,0 +1,171 @@
+---
+import Layout from '../layouts/Layout.astro';
+import '../styles/global.css';
+---
+
+<Layout title="Kiku Studio — Podcast Recording Studio for Android" description="Record, clean, edit, and publish podcasts on Android. AI-powered noise reduction, waveform editing, and double-ender recording.">
+  <section class="hero">
+    <div class="hero-badge">Podcast Studio</div>
+    <h1>Record. Clean. Publish.<br/>All on Android.</h1>
+    <p class="hero-sub">
+      AI-powered podcast studio for field journalists and creators.
+      Professional-quality audio from your phone's microphone.
+    </p>
+    <!-- <a href="https://play.google.com/store/apps/details?id=com.wharfe.kikustudio" class="cta">Get on Google Play</a> -->
+    <p class="coming-soon">Coming soon to Google Play</p>
+  </section>
+
+  <section class="features">
+    <div class="feature">
+      <div class="feature-icon">&#x1F399;</div>
+      <h3>Field Recording</h3>
+      <p>48kHz lossless recording with real-time level monitoring, pause/resume, and audio monitor through headphones.</p>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">&#x1F916;</div>
+      <h3>AI Noise Reduction</h3>
+      <p>DeepFilterNet3 removes background noise on-device. No cloud, no cost, no privacy concerns. One tap to studio quality.</p>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">&#x1F4CA;</div>
+      <h3>Waveform Editor</h3>
+      <p>Cut, trim, undo/redo with pinch-to-zoom waveform display. Select regions with long press, loop playback for review.</p>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">&#x1F4E4;</div>
+      <h3>Export & Share</h3>
+      <p>Export as WAV or M4A (AAC). Share directly to podcast hosts, messaging apps, or cloud storage.</p>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">&#x1F465;</div>
+      <h3>Double-ender Recording</h3>
+      <p>Each participant records locally. Import, auto-align by timestamp, and mix down with smart silence compression.</p>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">&#x1F4DD;</div>
+      <h3>Transcription</h3>
+      <p>Bring your own OpenAI API key for Whisper transcription. On-device transcription coming soon.</p>
+    </div>
+  </section>
+
+  <section class="specs">
+    <h2>Technical Details</h2>
+    <ul>
+      <li>48kHz / 16-bit mono PCM recording</li>
+      <li>DeepFilterNet3 noise reduction (Rust/JNI, on-device)</li>
+      <li>EBU R128 loudness normalization (-16 LUFS)</li>
+      <li>Energy-based Voice Activity Detection for silence trimming</li>
+      <li>Non-destructive waveform editing with 20-level undo</li>
+      <li>Project management with multi-segment support</li>
+      <li>Requires Android 8.0+, recommended Android 10+ with 4GB+ RAM</li>
+    </ul>
+  </section>
+
+  <section class="cta-section">
+    <h2>Also check out</h2>
+    <p><a href="/player">Kiku — Podcast Player</a> for listening to podcasts with Smart Speed and Voice Boost.</p>
+  </section>
+</Layout>
+
+<style>
+  .hero {
+    padding: 6rem 0 4rem;
+    text-align: center;
+  }
+  .hero-badge {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    border-radius: 2rem;
+    background: var(--color-primary-container);
+    color: var(--color-on-primary-container);
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+  }
+  .hero h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 700;
+    line-height: 1.1;
+  }
+  .hero-sub {
+    margin-top: 1.5rem;
+    font-size: 1.1rem;
+    color: var(--color-on-surface-variant);
+    max-width: 540px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .coming-soon {
+    margin-top: 2rem;
+    font-size: 0.95rem;
+    color: var(--color-primary);
+    font-weight: 600;
+  }
+  .cta {
+    display: inline-block;
+    margin-top: 2rem;
+    padding: 0.75rem 2rem;
+    background: var(--color-primary);
+    color: var(--color-on-primary);
+    border-radius: 2rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: opacity 0.2s;
+  }
+  .cta:hover { opacity: 0.9; text-decoration: none; }
+
+  .features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    padding: 2rem 0 4rem;
+  }
+  .feature {
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    background: var(--color-surface-variant);
+  }
+  .feature-icon {
+    font-size: 2rem;
+    margin-bottom: 0.75rem;
+  }
+  .feature h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+  .feature p {
+    color: var(--color-on-surface-variant);
+    font-size: 0.9rem;
+  }
+
+  .specs {
+    padding: 2rem 0;
+  }
+  .specs h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+  .specs ul {
+    padding-left: 1.5rem;
+    color: var(--color-on-surface-variant);
+  }
+  .specs li {
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+  }
+
+  .cta-section {
+    padding: 3rem 0;
+    text-align: center;
+  }
+  .cta-section h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+  }
+  .cta-section p {
+    color: var(--color-on-surface-variant);
+  }
+</style>
