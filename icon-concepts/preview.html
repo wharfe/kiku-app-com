@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kiku Icon — Final</title>
+<style>
+  body { font-family: -apple-system, sans-serif; background: #1a1a1a; color: #fff; padding: 2rem; }
+  h1 { text-align: center; margin-bottom: 0.5rem; }
+  .subtitle { text-align: center; color: #888; margin-bottom: 2rem; }
+  h2 { margin-top: 2rem; color: #FFB870; }
+  .concept { display: flex; gap: 3rem; align-items: start; margin: 1.5rem 0; flex-wrap: wrap; }
+  .icon-group { }
+  .label { font-size: 0.85rem; color: #ccc; margin-bottom: 0.5rem; font-weight: 600; }
+  .sizes { display: flex; gap: 1.5rem; align-items: end; }
+  .icon-wrap { text-align: center; }
+  .icon-wrap img { border-radius: 22%; display: block; }
+  .icon-wrap p { margin-top: 0.25rem; font-size: 0.7rem; color: #666; }
+
+  .launcher { margin-top: 2.5rem; background: #2a2a2a; padding: 2rem; border-radius: 1rem; }
+  .launcher h2 { margin-top: 0; }
+  .grid { display: flex; gap: 2rem; flex-wrap: wrap; align-items: end; margin-top: 1rem; }
+  .grid-item { text-align: center; }
+  .grid-item img { border-radius: 22%; }
+  .grid-item small { display: block; margin-top: 0.25rem; color: #888; font-size: 0.75rem; }
+
+  .mock-home {
+    margin-top: 2.5rem;
+    background: linear-gradient(135deg, #2d2d2d, #1a1a1a);
+    padding: 2rem;
+    border-radius: 1rem;
+  }
+  .mock-home h2 { margin-top: 0; }
+  .mock-row {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    margin-top: 1rem;
+    padding: 1rem;
+    background: rgba(255,255,255,0.05);
+    border-radius: 0.75rem;
+  }
+  .mock-app { text-align: center; width: 56px; }
+  .mock-app img { border-radius: 22%; }
+  .mock-app span { display: block; font-size: 0.6rem; color: #aaa; margin-top: 0.25rem; white-space: nowrap; }
+  .mock-other { width: 48px; height: 48px; border-radius: 22%; display: inline-block; }
+</style>
+</head>
+<body>
+<h1>Kiku App Icons — Final</h1>
+<p class="subtitle">Near-solid Warm Amber background + white symbols. Clean, recognizable, paired.</p>
+
+<h2>Kiku (Player)</h2>
+<div class="concept">
+  <div class="icon-group">
+    <div class="sizes">
+      <div class="icon-wrap"><img src="final-player.svg" width="108" height="108"><p>108dp</p></div>
+      <div class="icon-wrap"><img src="final-player.svg" width="72" height="72"><p>72dp</p></div>
+      <div class="icon-wrap"><img src="final-player.svg" width="48" height="48"><p>48dp</p></div>
+      <div class="icon-wrap"><img src="final-player.svg" width="36" height="36"><p>36dp</p></div>
+    </div>
+  </div>
+</div>
+
+<h2>Kiku Studio</h2>
+<div class="concept">
+  <div class="icon-group">
+    <div class="sizes">
+      <div class="icon-wrap"><img src="final-studio.svg" width="108" height="108"><p>108dp</p></div>
+      <div class="icon-wrap"><img src="final-studio.svg" width="72" height="72"><p>72dp</p></div>
+      <div class="icon-wrap"><img src="final-studio.svg" width="48" height="48"><p>48dp</p></div>
+      <div class="icon-wrap"><img src="final-studio.svg" width="36" height="36"><p>36dp</p></div>
+    </div>
+  </div>
+</div>
+
+<div class="launcher">
+  <h2>Side by side</h2>
+  <div class="grid">
+    <div class="grid-item"><img src="final-player.svg" width="56" height="56"><small>Kiku</small></div>
+    <div class="grid-item"><img src="final-studio.svg" width="56" height="56"><small>Kiku Studio</small></div>
+  </div>
+</div>
+
+<div class="mock-home">
+  <h2>Mock home screen (with other apps)</h2>
+  <div class="mock-row">
+    <div class="mock-app"><div class="mock-other" style="background: linear-gradient(135deg, #1DB954, #191414)"></div><span>Spotify</span></div>
+    <div class="mock-app"><img src="final-player.svg" width="48" height="48"><span>Kiku</span></div>
+    <div class="mock-app"><img src="final-studio.svg" width="48" height="48"><span>Studio</span></div>
+    <div class="mock-app"><div class="mock-other" style="background: linear-gradient(135deg, #F43B47, #453A94)"></div><span>Pocket Casts</span></div>
+    <div class="mock-app"><div class="mock-other" style="background: #fff"></div><span>Chrome</span></div>
+  </div>
+</div>
+
+</body>
+</html>

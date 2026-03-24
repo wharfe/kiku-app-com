@@ -3,23 +3,34 @@ import Layout from '../layouts/Layout.astro';
 import '../styles/global.css';
 ---
 
-<Layout title="Kiku — Smart Podcast Player for Android" description="Podcast player with Smart Speed, Voice Boost, AI summaries, and Podcast 2.0 chapters. Built natively for Android.">
+<Layout title="Kiku Player — Smart Audio Intelligence for Android" description="Listen to any audio, understand it with AI, and share what matters. Smart Speed, AI summaries, transcripts, and Q&A.">
   <section class="hero">
-    <div class="hero-badge">Podcast Player</div>
-    <h1>Your podcasts,<br/>your way.</h1>
+    <div class="hero-icon">
+      <img src="/icon-player.svg" alt="Kiku Player" class="hero-icon-svg" />
+    </div>
+    <div class="hero-badge">Audio Intelligence</div>
+    <h1>Listen. Understand.<br/>Share what matters.</h1>
     <p class="hero-sub">
-      A smart podcast player for Android, inspired by the best of iOS.
-      Smart Speed, Voice Boost, and AI-powered summaries.
+      More than a podcast player. Import audio from any app,
+      understand it with AI, and share key insights with your team.
     </p>
     <!-- <a href="https://play.google.com/store/apps/details?id=io.github.wharfe.kiku" class="cta">Get on Google Play</a> -->
     <p class="coming-soon">Coming soon to Google Play</p>
+  </section>
+
+  <!-- Scenario: Yuki -->
+  <section class="scenario">
+    <div class="scenario-quote">
+      <p>"I listen to English podcasts on my commute, read the transcript when I miss something, and ask AI to explain expressions in Japanese."</p>
+      <cite>— Yuki, 26, Tokyo. English learner, 40-minute commute.</cite>
+    </div>
   </section>
 
   <section class="features">
     <div class="feature">
       <div class="feature-icon">&#x23E9;</div>
       <h3>Smart Speed</h3>
-      <p>Automatically trims silence without changing pitch. Save hours of listening time every week.</p>
+      <p>Automatically trims silence without changing pitch. Save hours of listening time every week. See exactly how much time you've saved.</p>
     </div>
     <div class="feature">
       <div class="feature-icon">&#x1F50A;</div>
@@ -28,36 +39,60 @@ import '../styles/global.css';
     </div>
     <div class="feature">
       <div class="feature-icon">&#x1F916;</div>
-      <h3>AI Summaries</h3>
-      <p>Get AI-generated episode summaries so you can decide what to listen to before pressing play.</p>
+      <h3>AI Summaries & Q&A</h3>
+      <p>AI-generated episode summaries. Ask questions about the episode in your own language and get answers based on the transcript.</p>
     </div>
     <div class="feature">
-      <div class="feature-icon">&#x1F4D1;</div>
-      <h3>Podcast 2.0 Chapters</h3>
-      <p>Full support for enhanced chapters with images. Jump to any section of an episode instantly.</p>
+      <div class="feature-icon">&#x1F4DD;</div>
+      <h3>Live Transcripts</h3>
+      <p>Read along as you listen with synchronized highlighting. Tap any line to jump to that moment in the audio.</p>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">&#x1F4E5;</div>
+      <h3>Import Any Audio</h3>
+      <p>Receive audio from Telegram, WhatsApp, or any app via Share. Transcribe with Whisper API and unlock all AI features.</p>
     </div>
     <div class="feature">
       <div class="feature-icon">&#x1F310;</div>
       <h3>Open Ecosystem</h3>
       <p>Subscribe via RSS, Podcast Index, or OPML import. Your podcasts, not locked to any platform.</p>
     </div>
-    <div class="feature">
-      <div class="feature-icon">&#x1F3A8;</div>
-      <h3>Material Design 3</h3>
-      <p>Beautiful, native Android UI. Dark mode, dynamic colors, and smooth animations throughout.</p>
+  </section>
+
+  <!-- Scenario: Amirah -->
+  <section class="scenario">
+    <div class="scenario-quote">
+      <p>"I receive 15-minute audio news on Telegram every morning. Kiku Player summarizes it with AI so I can share the key points to my WhatsApp team in 30 seconds."</p>
+      <cite>— Amirah, 28, Jakarta. Freelance journalist, 3GB prepaid SIM.</cite>
     </div>
   </section>
 
   <section class="cta-section">
-    <h2>Also check out</h2>
-    <p><a href="/studio">Kiku Studio</a> — record and produce your own podcast, right on your Android phone.</p>
+    <h2>Create with Kiku Studio</h2>
+    <p>Record, anonymize, and publish podcasts — offline, on your Android phone.</p>
+    <a href="/studio" class="cta-link">Learn about Kiku Studio &rarr;</a>
   </section>
 </Layout>
 
 <style>
   .hero {
-    padding: 6rem 0 4rem;
+    padding: 6rem 0 3rem;
     text-align: center;
+  }
+  .hero-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 20px;
+    background: var(--color-primary-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+  }
+  .hero-icon-svg {
+    width: 56px;
+    height: 56px;
+    filter: brightness(0) invert(1);
   }
   .hero-badge {
     display: inline-block;
@@ -87,6 +122,32 @@ import '../styles/global.css';
     font-size: 0.95rem;
     color: var(--color-primary);
     font-weight: 600;
+  }
+
+  .scenario {
+    padding: 2rem 0;
+  }
+  .scenario-quote {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 2rem;
+    border-left: 4px solid var(--color-primary-light);
+    background: var(--color-surface-variant);
+    border-radius: 0 0.75rem 0.75rem 0;
+  }
+  .scenario-quote p {
+    font-size: 1.05rem;
+    font-style: italic;
+    color: var(--color-on-surface);
+    line-height: 1.6;
+  }
+  .scenario-quote cite {
+    display: block;
+    margin-top: 1rem;
+    font-size: 0.85rem;
+    font-style: normal;
+    font-weight: 600;
+    color: var(--color-primary);
   }
 
   .features {
@@ -121,9 +182,14 @@ import '../styles/global.css';
   .cta-section h2 {
     font-size: 1.5rem;
     font-weight: 700;
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.5rem;
   }
   .cta-section p {
     color: var(--color-on-surface-variant);
+    margin-bottom: 1rem;
+  }
+  .cta-link {
+    font-weight: 600;
+    color: var(--color-primary);
   }
 </style>

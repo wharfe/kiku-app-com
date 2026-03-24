@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 108 108" width="432" height="432">
+  <defs>
+    <linearGradient id="bg-fp" x1="0" y1="0" x2="0.6" y2="1">
+      <stop offset="0%" stop-color="#D07000"/>
+      <stop offset="100%" stop-color="#C06600"/>
+    </linearGradient>
+    <linearGradient id="fg-fp" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#FFF0DD"/>
+    </linearGradient>
+    <radialGradient id="shine-fp" cx="0.35" cy="0.25" r="0.55">
+      <stop offset="0%" stop-color="rgba(255,255,255,0.12)"/>
+      <stop offset="100%" stop-color="rgba(255,255,255,0)"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Background: near-solid amber with very subtle gradient -->
+  <rect width="108" height="108" fill="url(#bg-fp)" rx="24"/>
+  <rect width="108" height="108" fill="url(#shine-fp)" rx="24"/>
+
+  <!-- Headphone — large, centered -->
+  <g transform="translate(54, 52)">
+    <!-- Headband arc -->
+    <path d="M-29,-8 A33,33 0 0,1 29,-8" fill="none" stroke="url(#fg-fp)" stroke-width="6.5" stroke-linecap="round"/>
+    <!-- Left ear cup -->
+    <rect x="-34" y="-12" width="14" height="30" rx="7" fill="url(#fg-fp)"/>
+    <!-- Right ear cup -->
+    <rect x="20" y="-12" width="14" height="30" rx="7" fill="url(#fg-fp)"/>
+    <!-- Sound wave -->
+    <path d="M-8,1 Q-4,-10 0,1 Q4,12 8,1" fill="none" stroke="url(#fg-fp)" stroke-width="3" stroke-linecap="round" opacity="0.75"/>
+  </g>
+</svg>

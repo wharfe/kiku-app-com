@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 108 108" width="432" height="432">
+  <defs>
+    <linearGradient id="bg-as" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FFD0A0"/>
+      <stop offset="100%" stop-color="#E8820C"/>
+    </linearGradient>
+    <linearGradient id="fg-as" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#FFF0E0"/>
+    </linearGradient>
+    <radialGradient id="shine-as" cx="0.35" cy="0.25" r="0.6">
+      <stop offset="0%" stop-color="rgba(255,255,255,0.25)"/>
+      <stop offset="100%" stop-color="rgba(255,255,255,0)"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Background (same gradient as player) -->
+  <rect width="108" height="108" fill="url(#bg-as)" rx="24"/>
+  <rect width="108" height="108" fill="url(#shine-as)" rx="24"/>
+
+  <!-- Microphone shape -->
+  <g transform="translate(54, 50)">
+    <!-- Mic head (capsule) -->
+    <rect x="-8" y="-22" width="16" height="24" rx="8" fill="url(#fg-as)"/>
+    <!-- Mic body/stand -->
+    <line x1="0" y1="2" x2="0" y2="14" stroke="url(#fg-as)" stroke-width="4" stroke-linecap="round"/>
+    <!-- Mic base arc -->
+    <path d="M-12,14 L12,14" stroke="url(#fg-as)" stroke-width="3" stroke-linecap="round"/>
+    <!-- Sound waves (creating) -->
+    <path d="M14,-10 Q18,-5 14,0" fill="none" stroke="url(#fg-as)" stroke-width="2.5" stroke-linecap="round" opacity="0.7"/>
+    <path d="M18,-14 Q24,-5 18,4" fill="none" stroke="url(#fg-as)" stroke-width="2.5" stroke-linecap="round" opacity="0.5"/>
+  </g>
+</svg>

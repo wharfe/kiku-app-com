@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 108 108" width="432" height="432">
+  <defs>
+    <linearGradient id="bg-c" x1="0" y1="0" x2="0.8" y2="1">
+      <stop offset="0%" stop-color="#FFDCBE"/>
+      <stop offset="40%" stop-color="#FFB870"/>
+      <stop offset="100%" stop-color="#E8820C"/>
+    </linearGradient>
+    <radialGradient id="shine-c" cx="0.35" cy="0.3" r="0.5">
+      <stop offset="0%" stop-color="rgba(255,255,255,0.3)"/>
+      <stop offset="100%" stop-color="rgba(255,255,255,0)"/>
+    </radialGradient>
+    <linearGradient id="circle-c" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#FFF5EB"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background: warm gradient -->
+  <rect width="108" height="108" fill="url(#bg-c)" rx="24"/>
+  <rect width="108" height="108" fill="url(#shine-c)" rx="24"/>
+
+  <!-- Central circle -->
+  <circle cx="54" cy="52" r="26" fill="url(#circle-c)" opacity="0.95"/>
+
+  <!-- Headphone inside circle -->
+  <g transform="translate(54, 50)">
+    <path d="M-14,-6 A17,17 0 0,1 14,-6" fill="none" stroke="#8B5000" stroke-width="3.5" stroke-linecap="round"/>
+    <rect x="-17" y="-7" width="7" height="15" rx="3.5" fill="#8B5000"/>
+    <rect x="10" y="-7" width="7" height="15" rx="3.5" fill="#8B5000"/>
+  </g>
+
+  <!-- Small sound dots -->
+  <circle cx="54" cy="72" r="1.5" fill="white" opacity="0.7"/>
+  <circle cx="60" cy="74" r="1" fill="white" opacity="0.5"/>
+  <circle cx="48" cy="74" r="1" fill="white" opacity="0.5"/>
+</svg>

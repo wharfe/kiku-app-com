@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 108 108" width="432" height="432">
+  <defs>
+    <linearGradient id="bg-fs" x1="0" y1="0" x2="0.6" y2="1">
+      <stop offset="0%" stop-color="#D07000"/>
+      <stop offset="100%" stop-color="#C06600"/>
+    </linearGradient>
+    <linearGradient id="fg-fs" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#FFF0DD"/>
+    </linearGradient>
+    <radialGradient id="shine-fs" cx="0.35" cy="0.25" r="0.55">
+      <stop offset="0%" stop-color="rgba(255,255,255,0.12)"/>
+      <stop offset="100%" stop-color="rgba(255,255,255,0)"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Background: near-solid amber with very subtle gradient -->
+  <rect width="108" height="108" fill="url(#bg-fs)" rx="24"/>
+  <rect width="108" height="108" fill="url(#shine-fs)" rx="24"/>
+
+  <!-- Microphone — large, centered -->
+  <g transform="translate(54, 49)">
+    <!-- Mic capsule -->
+    <rect x="-11" y="-27" width="22" height="32" rx="11" fill="url(#fg-fs)"/>
+    <!-- Holder arc -->
+    <path d="M-17,5 A17,17 0 0,0 17,5" fill="none" stroke="url(#fg-fs)" stroke-width="3.5" stroke-linecap="round"/>
+    <!-- Stand -->
+    <line x1="0" y1="5" x2="0" y2="20" stroke="url(#fg-fs)" stroke-width="4" stroke-linecap="round"/>
+    <!-- Base -->
+    <line x1="-11" y1="20" x2="11" y2="20" stroke="url(#fg-fs)" stroke-width="3.5" stroke-linecap="round"/>
+    <!-- Sound arcs -->
+    <path d="M17,-12 Q23,-5 17,2" fill="none" stroke="url(#fg-fs)" stroke-width="2.5" stroke-linecap="round" opacity="0.6"/>
+    <path d="M23,-17 Q31,-5 23,7" fill="none" stroke="url(#fg-fs)" stroke-width="2.5" stroke-linecap="round" opacity="0.35"/>
+  </g>
+</svg>

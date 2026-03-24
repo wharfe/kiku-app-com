@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 108 108" width="432" height="432">
+  <defs>
+    <linearGradient id="bg-d" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#8B5000"/>
+      <stop offset="50%" stop-color="#C06A00"/>
+      <stop offset="100%" stop-color="#E8820C"/>
+    </linearGradient>
+    <linearGradient id="fg-d" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#FFE8CC"/>
+    </linearGradient>
+    <radialGradient id="shine-d" cx="0.3" cy="0.2" r="0.65">
+      <stop offset="0%" stop-color="rgba(255,255,255,0.2)"/>
+      <stop offset="100%" stop-color="rgba(255,255,255,0)"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="108" height="108" fill="url(#bg-d)" rx="24"/>
+  <rect width="108" height="108" fill="url(#shine-d)" rx="24"/>
+
+  <!-- Large headphone — fills more of the icon -->
+  <g transform="translate(54, 52)">
+    <!-- Headband arc (thicker, wider) -->
+    <path d="M-28,-8 A32,32 0 0,1 28,-8" fill="none" stroke="url(#fg-d)" stroke-width="6" stroke-linecap="round"/>
+    <!-- Left ear cup (bigger) -->
+    <rect x="-33" y="-12" width="13" height="28" rx="6.5" fill="url(#fg-d)"/>
+    <!-- Right ear cup (bigger) -->
+    <rect x="20" y="-12" width="13" height="28" rx="6.5" fill="url(#fg-d)"/>
+    <!-- Sound wave in center -->
+    <path d="M-8,0 Q-4,-10 0,0 Q4,10 8,0" fill="none" stroke="url(#fg-d)" stroke-width="3" stroke-linecap="round" opacity="0.8"/>
+  </g>
+</svg>

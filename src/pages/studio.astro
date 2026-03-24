@@ -3,49 +3,93 @@ import Layout from '../layouts/Layout.astro';
 import '../styles/global.css';
 ---
 
-<Layout title="Kiku Studio — Podcast Recording Studio for Android" description="Record, clean, edit, and publish podcasts on Android. AI-powered noise reduction, waveform editing, and double-ender recording.">
+<Layout title="Kiku Studio — Offline-First Podcast Studio for Android" description="Record, anonymize voices, transcribe offline, and share — all on your Android phone. Built for journalists who can't trust the cloud.">
   <section class="hero">
-    <div class="hero-badge">Podcast Studio</div>
-    <h1>Record. Clean. Publish.<br/>All on Android.</h1>
+    <div class="hero-icon">
+      <img src="/icon-studio.svg" alt="Kiku Studio" class="hero-icon-svg" />
+    </div>
+    <div class="hero-badge">Offline-First Studio</div>
+    <h1>Record. Protect.<br/>Share safely.</h1>
     <p class="hero-sub">
-      AI-powered podcast studio for field journalists and creators.
-      Professional-quality audio from your phone's microphone.
+      The podcast studio that works without internet, without sending your data anywhere,
+      and helps obscure your source's identity.
     </p>
     <!-- <a href="https://play.google.com/store/apps/details?id=com.wharfe.kikustudio" class="cta">Get on Google Play</a> -->
     <p class="coming-soon">Coming soon to Google Play</p>
   </section>
 
+  <!-- Scenario: Daniel -->
+  <section class="scenario">
+    <div class="scenario-quote">
+      <p>"I interview whistleblowers. Their voices are pitch-shifted before the recording leaves my device. Everything runs offline — no data sent to any server."</p>
+      <cite>— Daniel, 35, Central America. Investigative journalist.</cite>
+    </div>
+  </section>
+
   <section class="features">
+    <div class="feature highlight">
+      <div class="feature-icon">&#x1F6E1;</div>
+      <h3>Voice Anonymization</h3>
+      <p>Pitch-shift voice modification to help reduce speaker recognizability. Adjustable strength. Designed for source protection.</p>
+    </div>
+    <div class="feature highlight">
+      <div class="feature-icon">&#x2708;</div>
+      <h3>Fully Offline</h3>
+      <p>AI noise reduction, voice anonymization, transcription — all on-device after one-time model download. No internet required. No data leaves your phone.</p>
+    </div>
+    <div class="feature highlight">
+      <div class="feature-icon">&#x1F6AB;</div>
+      <h3>No Metadata</h3>
+      <p>Exported audio files contain no location, device info, or timestamps in the file data. UUID filenames prevent timing analysis.</p>
+    </div>
     <div class="feature">
       <div class="feature-icon">&#x1F399;</div>
       <h3>Field Recording</h3>
-      <p>48kHz lossless recording with real-time level monitoring, pause/resume, and audio monitor through headphones.</p>
+      <p>48kHz lossless recording with real-time monitoring, pause/resume, Bluetooth warning, and storage checks.</p>
     </div>
     <div class="feature">
       <div class="feature-icon">&#x1F916;</div>
       <h3>AI Noise Reduction</h3>
-      <p>DeepFilterNet3 removes background noise on-device. No cloud, no cost, no privacy concerns. One tap to studio quality.</p>
+      <p>DeepFilterNet3 removes background noise on-device. One tap to studio quality — no cloud, no cost.</p>
     </div>
     <div class="feature">
       <div class="feature-icon">&#x1F4CA;</div>
       <h3>Waveform Editor</h3>
-      <p>Cut, trim, undo/redo with pinch-to-zoom waveform display. Select regions with long press, loop playback for review.</p>
-    </div>
-    <div class="feature">
-      <div class="feature-icon">&#x1F4E4;</div>
-      <h3>Export & Share</h3>
-      <p>Export as WAV or M4A (AAC). Share directly to podcast hosts, messaging apps, or cloud storage.</p>
-    </div>
-    <div class="feature">
-      <div class="feature-icon">&#x1F465;</div>
-      <h3>Double-ender Recording</h3>
-      <p>Each participant records locally. Import, auto-align by timestamp, and mix down with smart silence compression.</p>
+      <p>Cut, trim, undo/redo with pinch-to-zoom. Chapter markers for show notes. Export clips for social media.</p>
     </div>
     <div class="feature">
       <div class="feature-icon">&#x1F4DD;</div>
-      <h3>Transcription</h3>
-      <p>Bring your own OpenAI API key for Whisper transcription. On-device transcription coming soon.</p>
+      <h3>On-Device Transcription</h3>
+      <p>whisper.cpp running locally on your phone. Or bring your own OpenAI API key. Copy or share transcription text directly.</p>
     </div>
+    <div class="feature">
+      <div class="feature-icon">&#x1F465;</div>
+      <h3>Double-Ender Recording</h3>
+      <p>Each participant records locally. Auto-align by timestamp, mix with smart silence compression — no call quality compromise.</p>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">&#x1F4E4;</div>
+      <h3>Clip & Share</h3>
+      <p>Select a highlight, export as a clip, and share directly via WhatsApp, Telegram, or any app. Perfect for social media.</p>
+    </div>
+  </section>
+
+  <!-- Scenario: Priya -->
+  <section class="scenario">
+    <div class="scenario-quote">
+      <p>"I record interviews at the local market, remove the noise with one tap, cut the best parts, and share the episode — all from my phone. No PC needed."</p>
+      <cite>— Priya, 32, Mumbai. Independent podcaster, publishes biweekly.</cite>
+    </div>
+  </section>
+
+  <section class="privacy-note">
+    <h2>A note on privacy</h2>
+    <p>
+      Kiku Studio is free, with no ads and no tracking. Voice anonymization uses pitch shifting,
+      which helps reduce speaker recognizability but cannot guarantee complete anonymity — speech patterns,
+      content, and environmental sounds may still allow identification by a determined adversary.
+      For maximum protection, combine with device encryption and a strong lock screen.
+    </p>
   </section>
 
   <section class="specs">
@@ -53,24 +97,43 @@ import '../styles/global.css';
     <ul>
       <li>48kHz / 16-bit mono PCM recording</li>
       <li>DeepFilterNet3 noise reduction (Rust/JNI, on-device)</li>
+      <li>TD-PSOLA voice anonymization (pure Kotlin, no dependencies)</li>
+      <li>whisper.cpp on-device transcription (C/JNI, ~75MB model download)</li>
       <li>EBU R128 loudness normalization (-16 LUFS)</li>
       <li>Energy-based Voice Activity Detection for silence trimming</li>
       <li>Non-destructive waveform editing with 20-level undo</li>
-      <li>Project management with multi-segment support</li>
+      <li>Chapter markers with timestamp export</li>
+      <li>UUID filenames, no metadata in exports, FLAG_SECURE option</li>
       <li>Requires Android 8.0+, recommended Android 10+ with 4GB+ RAM</li>
     </ul>
   </section>
 
   <section class="cta-section">
-    <h2>Also check out</h2>
-    <p><a href="/player">Kiku — Podcast Player</a> for listening to podcasts with Smart Speed and Voice Boost.</p>
+    <h2>Listen with Kiku Player</h2>
+    <p>Smart Speed, AI summaries, and real-time transcripts for any audio.</p>
+    <a href="/player" class="cta-link">Learn about Kiku Player &rarr;</a>
   </section>
 </Layout>
 
 <style>
   .hero {
-    padding: 6rem 0 4rem;
+    padding: 6rem 0 3rem;
     text-align: center;
+  }
+  .hero-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 20px;
+    background: var(--color-primary-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+  }
+  .hero-icon-svg {
+    width: 56px;
+    height: 56px;
+    filter: brightness(0) invert(1);
   }
   .hero-badge {
     display: inline-block;
@@ -91,7 +154,7 @@ import '../styles/global.css';
     margin-top: 1.5rem;
     font-size: 1.1rem;
     color: var(--color-on-surface-variant);
-    max-width: 540px;
+    max-width: 560px;
     margin-left: auto;
     margin-right: auto;
   }
@@ -101,18 +164,32 @@ import '../styles/global.css';
     color: var(--color-primary);
     font-weight: 600;
   }
-  .cta {
-    display: inline-block;
-    margin-top: 2rem;
-    padding: 0.75rem 2rem;
-    background: var(--color-primary);
-    color: var(--color-on-primary);
-    border-radius: 2rem;
-    font-weight: 600;
-    text-decoration: none;
-    transition: opacity 0.2s;
+
+  .scenario {
+    padding: 2rem 0;
   }
-  .cta:hover { opacity: 0.9; text-decoration: none; }
+  .scenario-quote {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 2rem;
+    border-left: 4px solid var(--color-primary-light);
+    background: var(--color-surface-variant);
+    border-radius: 0 0.75rem 0.75rem 0;
+  }
+  .scenario-quote p {
+    font-size: 1.05rem;
+    font-style: italic;
+    color: var(--color-on-surface);
+    line-height: 1.6;
+  }
+  .scenario-quote cite {
+    display: block;
+    margin-top: 1rem;
+    font-size: 0.85rem;
+    font-style: normal;
+    font-weight: 600;
+    color: var(--color-primary);
+  }
 
   .features {
     display: grid;
@@ -124,6 +201,9 @@ import '../styles/global.css';
     padding: 1.5rem;
     border-radius: 0.75rem;
     background: var(--color-surface-variant);
+  }
+  .feature.highlight {
+    border: 2px solid var(--color-primary-light);
   }
   .feature-icon {
     font-size: 2rem;
@@ -137,6 +217,25 @@ import '../styles/global.css';
   .feature p {
     color: var(--color-on-surface-variant);
     font-size: 0.9rem;
+  }
+
+  .privacy-note {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: var(--color-surface-variant);
+    border-radius: 0.75rem;
+    text-align: center;
+  }
+  .privacy-note h2 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+  }
+  .privacy-note p {
+    font-size: 0.9rem;
+    color: var(--color-on-surface-variant);
+    line-height: 1.6;
   }
 
   .specs {
@@ -163,9 +262,14 @@ import '../styles/global.css';
   .cta-section h2 {
     font-size: 1.5rem;
     font-weight: 700;
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.5rem;
   }
   .cta-section p {
     color: var(--color-on-surface-variant);
+    margin-bottom: 1rem;
+  }
+  .cta-link {
+    font-weight: 600;
+    color: var(--color-primary);
   }
 </style>
