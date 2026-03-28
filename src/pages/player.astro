@@ -4,192 +4,422 @@ import '../styles/global.css';
 ---
 
 <Layout title="KIKU Player — Smart Audio Intelligence for Android" description="Listen to any audio, understand it with AI, and share what matters. Smart Speed, AI summaries, transcripts, and Q&A.">
+
+  <!-- Hero -->
   <section class="hero">
-    <div class="hero-icon">
-      <img src="/icon-player.svg" alt="KIKU Player" class="hero-icon-svg" />
+    <div class="hero-bg"></div>
+    <div class="hero-content container">
+      <div class="hero-top">
+        <div class="hero-text">
+          <div class="hero-icon-wrap animate-fade-up">
+            <img src="/icon-player.svg" alt="" class="hero-icon-svg" />
+          </div>
+          <span class="badge animate-fade-up delay-1">Audio Intelligence</span>
+          <h1 class="animate-fade-up delay-2">Listen. Understand.<br/>Share what matters.</h1>
+          <p class="hero-sub animate-fade-up delay-3">
+            More than a podcast player. Import audio from any app,
+            understand it with AI, and share key insights with your team.
+          </p>
+          <div class="hero-cta animate-fade-up delay-4">
+            <span class="btn btn-primary">Coming soon to Google Play</span>
+          </div>
+        </div>
+        <div class="hero-visual animate-fade-up delay-3">
+          <div class="phone-frame">
+            <img src="/images/screenshot-player-main.jpg" alt="KIKU Player main screen" class="phone-screen" />
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="hero-badge">Audio Intelligence</div>
-    <h1>Listen. Understand.<br/>Share what matters.</h1>
-    <p class="hero-sub">
-      More than a podcast player. Import audio from any app,
-      understand it with AI, and share key insights with your team.
-    </p>
-    <!-- <a href="https://play.google.com/store/apps/details?id=io.github.wharfe.kiku" class="cta">Get on Google Play</a> -->
-    <p class="coming-soon">Coming soon to Google Play</p>
   </section>
 
   <!-- Scenario: Yuki -->
   <section class="scenario">
-    <div class="scenario-quote">
-      <p>"I listen to English podcasts on my commute, read the transcript when I miss something, and ask AI to explain expressions in Japanese."</p>
-      <cite>— Yuki, 26, Tokyo. English learner, 40-minute commute.</cite>
+    <div class="container">
+      <div class="scenario-inner">
+        <div class="scenario-image">
+          <img src="/images/persona-yuki.jpg" alt="Yuki listening on Tokyo commute" class="scenario-photo" />
+        </div>
+        <div class="scenario-content">
+          <div class="scenario-label">Commute listening</div>
+          <blockquote>
+            "I listen to English podcasts on my commute, read the transcript when I miss something, and ask AI to explain expressions in Japanese."
+          </blockquote>
+          <div class="scenario-author">
+            <strong>Yuki, 26</strong>
+            <span>English learner, 40-minute commute, Tokyo</span>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
+  <!-- Features -->
   <section class="features">
-    <div class="feature">
-      <div class="feature-icon">&#x23E9;</div>
-      <h3>Smart Speed</h3>
-      <p>Automatically trims silence without changing pitch. Save hours of listening time every week. See exactly how much time you've saved.</p>
-    </div>
-    <div class="feature">
-      <div class="feature-icon">&#x1F50A;</div>
-      <h3>Voice Boost</h3>
-      <p>EQ optimized for spoken word. Hear every word clearly, even in noisy environments.</p>
-    </div>
-    <div class="feature">
-      <div class="feature-icon">&#x1F916;</div>
-      <h3>AI Summaries & Q&A</h3>
-      <p>AI-generated episode summaries. Ask questions about the episode in your own language and get answers based on the transcript.</p>
-    </div>
-    <div class="feature">
-      <div class="feature-icon">&#x1F4DD;</div>
-      <h3>Live Transcripts</h3>
-      <p>Read along as you listen with synchronized highlighting. Tap any line to jump to that moment in the audio.</p>
-    </div>
-    <div class="feature">
-      <div class="feature-icon">&#x1F4E5;</div>
-      <h3>Import Any Audio</h3>
-      <p>Receive audio from Telegram, WhatsApp, or any app via Share. Transcribe with Whisper API and unlock all AI features.</p>
-    </div>
-    <div class="feature">
-      <div class="feature-icon">&#x1F310;</div>
-      <h3>Open Ecosystem</h3>
-      <p>Subscribe via RSS, Podcast Index, or OPML import. Your podcasts, not locked to any platform.</p>
+    <div class="container">
+      <div class="section-divider"></div>
+      <h2 class="section-title">Intelligent listening</h2>
+      <p class="section-sub">Every feature is designed to help you get more from the audio you listen to.</p>
+
+      <div class="feature-grid">
+        <div class="feature-card feature-hero-card">
+          <div class="feature-card-inner">
+            <div class="feature-info">
+              <h3>Live Transcripts</h3>
+              <p>Read along as you listen with synchronized highlighting. Tap any line to jump to that moment. Share specific segments as text with one tap.</p>
+            </div>
+            <div class="feature-visual">
+              <img src="/images/screenshot-player-transcript.jpg" alt="Live transcript with sync highlighting" class="feature-screenshot" />
+            </div>
+          </div>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-accent"></div>
+          <h3>Smart Speed</h3>
+          <p>Automatically trims silence without changing pitch. Save hours of listening time every week. Track exactly how much time you've saved per podcast.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-accent"></div>
+          <h3>Voice Boost</h3>
+          <p>EQ optimized for spoken word. Boosts voice frequencies (300Hz-3kHz) so you hear every word clearly — even in noisy environments.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-accent"></div>
+          <h3>AI Summaries & Q&A</h3>
+          <p>AI-generated episode summaries in any language. Ask questions about the episode and get answers based on the transcript. Powered by Claude.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-accent"></div>
+          <h3>Import Any Audio</h3>
+          <p>Receive audio from Telegram, WhatsApp, or any app via Share. Transcribe with Whisper and unlock all AI features on any audio file.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-accent"></div>
+          <h3>Open Ecosystem</h3>
+          <p>Subscribe via RSS, Podcast Index, or OPML import. Your podcasts, not locked to any platform. Export anytime.</p>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- Scenario: Amirah -->
   <section class="scenario">
-    <div class="scenario-quote">
-      <p>"I receive 15-minute audio news on Telegram every morning. KIKU Player summarizes it with AI so I can share the key points to my WhatsApp team in 30 seconds."</p>
-      <cite>— Amirah, 28, Jakarta. Freelance journalist, 3GB prepaid SIM.</cite>
+    <div class="container">
+      <div class="scenario-inner scenario-reverse">
+        <div class="scenario-content">
+          <div class="scenario-label">News workflow</div>
+          <blockquote>
+            "I receive 15-minute audio news on Telegram every morning. KIKU Player summarizes it with AI so I can share the key points to my WhatsApp team in 30 seconds."
+          </blockquote>
+          <div class="scenario-author">
+            <strong>Amirah, 28</strong>
+            <span>Freelance journalist, 3GB prepaid SIM, Jakarta</span>
+          </div>
+        </div>
+        <div class="scenario-image">
+          <img src="/images/persona-amirah.jpg" alt="Amirah at desk with phone" class="scenario-photo" />
+        </div>
+      </div>
+      <p class="scenario-disclaimer">Names, portraits, and quotes are fictional, created to illustrate real-world use cases. Images generated with AI.</p>
     </div>
   </section>
 
-  <section class="cta-section">
-    <h2>Create with KIKU Studio</h2>
-    <p>Record, anonymize, and publish podcasts — offline, on your Android phone.</p>
-    <a href="/studio" class="cta-link">Learn about KIKU Studio &rarr;</a>
+  <!-- Cross-sell -->
+  <section class="cross-sell">
+    <div class="container">
+      <div class="cross-sell-card">
+        <div class="cross-sell-icon">
+          <img src="/icon-studio.svg" alt="" class="cross-sell-icon-svg" />
+        </div>
+        <div class="cross-sell-content">
+          <h2>Create with KIKU Studio</h2>
+          <p>Record, anonymize, and publish podcasts — offline, on your Android phone. AI noise reduction in one tap.</p>
+          <a href="/studio" class="btn btn-outline">Learn about Studio &rarr;</a>
+        </div>
+      </div>
+    </div>
   </section>
+
 </Layout>
 
 <style>
+  /* Hero */
   .hero {
-    padding: 6rem 0 3rem;
-    text-align: center;
+    position: relative;
+    padding: calc(var(--space-section) + 2rem) 0 var(--space-block);
+    overflow: hidden;
   }
-  .hero-icon {
-    width: 80px;
-    height: 80px;
-    border-radius: 20px;
-    background: var(--color-primary-light);
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 70% 50% at 30% 0%, var(--color-hero-gradient-end) 0%, transparent 70%),
+      var(--color-surface);
+    z-index: -1;
+  }
+  .hero-top {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+  }
+  .hero-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .hero-icon-wrap {
+    width: 72px;
+    height: 72px;
+    border-radius: 18px;
+    background: var(--color-brand);
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 auto 1.5rem;
+    margin-bottom: 1.25rem;
+    box-shadow: var(--shadow-glow);
   }
   .hero-icon-svg {
-    width: 56px;
-    height: 56px;
+    width: 48px;
+    height: 48px;
     filter: brightness(0) invert(1);
   }
-  .hero-badge {
-    display: inline-block;
-    padding: 0.25rem 0.75rem;
-    border-radius: 2rem;
-    background: var(--color-primary-container);
-    color: var(--color-on-primary-container);
-    font-size: 0.85rem;
-    font-weight: 600;
-    margin-bottom: 1.5rem;
-  }
   .hero h1 {
-    font-size: clamp(2rem, 5vw, 3.5rem);
-    font-weight: 700;
-    line-height: 1.1;
+    font-size: var(--text-h1);
+    color: var(--color-on-surface);
+    margin-top: 1rem;
+    margin-bottom: 1.25rem;
   }
   .hero-sub {
-    margin-top: 1.5rem;
-    font-size: 1.1rem;
+    font-size: var(--text-body-lg);
     color: var(--color-on-surface-variant);
-    max-width: 540px;
-    margin-left: auto;
-    margin-right: auto;
+    line-height: 1.7;
+    margin-bottom: 2rem;
   }
-  .coming-soon {
-    margin-top: 2rem;
-    font-size: 0.95rem;
-    color: var(--color-primary);
-    font-weight: 600;
+  .hero-visual {
+    display: flex;
+    justify-content: center;
   }
-
-  .scenario {
-    padding: 2rem 0;
+  .phone-frame {
+    width: 240px;
+    border-radius: 28px;
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+    border: 3px solid var(--color-outline-variant);
+    background: var(--color-on-surface);
   }
-  .scenario-quote {
-    max-width: 640px;
-    margin: 0 auto;
-    padding: 2rem;
-    border-left: 4px solid var(--color-primary-light);
-    background: var(--color-surface-variant);
-    border-radius: 0 0.75rem 0.75rem 0;
-  }
-  .scenario-quote p {
-    font-size: 1.05rem;
-    font-style: italic;
-    color: var(--color-on-surface);
-    line-height: 1.6;
-  }
-  .scenario-quote cite {
+  .phone-screen {
+    width: 100%;
     display: block;
-    margin-top: 1rem;
-    font-size: 0.85rem;
-    font-style: normal;
-    font-weight: 600;
-    color: var(--color-primary);
   }
 
-  .features {
+  /* Scenarios */
+  .scenario {
+    padding: var(--space-block) 0;
+  }
+  .scenario-inner {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
-    padding: 2rem 0 4rem;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
   }
-  .feature {
-    padding: 1.5rem;
-    border-radius: 0.75rem;
-    background: var(--color-surface-variant);
+  .scenario-reverse {
+    direction: rtl;
   }
-  .feature-icon {
-    font-size: 2rem;
+  .scenario-reverse > * {
+    direction: ltr;
+  }
+  .scenario-photo {
+    width: 100%;
+    border-radius: var(--radius-lg);
+    object-fit: cover;
+    aspect-ratio: 4 / 3;
+  }
+  .scenario-label {
+    font-size: var(--text-xs);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--color-primary-light);
     margin-bottom: 0.75rem;
   }
-  .feature h3 {
-    font-size: 1.1rem;
-    font-weight: 600;
-    margin-bottom: 0.5rem;
+  .scenario-content blockquote {
+    font-family: var(--font-display);
+    font-size: 1.35rem;
+    color: var(--color-on-surface);
+    line-height: 1.5;
+    margin-bottom: 1.25rem;
   }
-  .feature p {
+  .scenario-author {
+    display: flex;
+    flex-direction: column;
+    gap: 0.125rem;
+  }
+  .scenario-author strong {
+    font-size: var(--text-sm);
+  }
+  .scenario-author span {
+    font-size: var(--text-xs);
     color: var(--color-on-surface-variant);
-    font-size: 0.9rem;
   }
 
-  .cta-section {
-    padding: 3rem 0;
-    text-align: center;
+  /* Features */
+  .features {
+    padding: var(--space-section) 0;
+    background: var(--color-surface-variant);
   }
-  .cta-section h2 {
-    font-size: 1.5rem;
-    font-weight: 700;
+  .section-title {
+    font-size: var(--text-h2);
+    text-align: center;
+    color: var(--color-on-surface);
+    margin-bottom: 0.75rem;
+  }
+  .section-sub {
+    text-align: center;
+    font-size: var(--text-body-lg);
+    color: var(--color-on-surface-variant);
+    max-width: 560px;
+    margin: 0 auto 3rem;
+  }
+  .feature-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+  .feature-card {
+    padding: 2rem;
+    border-radius: var(--radius-lg);
+    background: var(--color-surface-elevated);
+    border: 1px solid var(--color-outline-variant);
+    position: relative;
+    overflow: hidden;
+    transition: all var(--duration-normal) var(--ease-out);
+  }
+  .feature-card:hover {
+    border-color: var(--color-primary-container);
+    box-shadow: var(--shadow-md);
+  }
+  .feature-accent {
+    width: 40px;
+    height: 3px;
+    background: var(--color-brand);
+    border-radius: 2px;
+    margin-bottom: 1.25rem;
+  }
+  .feature-card h3 {
+    font-size: var(--text-h3);
+    color: var(--color-on-surface);
     margin-bottom: 0.5rem;
   }
-  .cta-section p {
+  .feature-card p {
+    font-size: var(--text-sm);
+    color: var(--color-on-surface-variant);
+    line-height: 1.6;
+  }
+  .feature-hero-card {
+    grid-column: 1 / -1;
+  }
+  .feature-card-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+    align-items: center;
+  }
+  .feature-info h3 {
+    font-size: 1.5rem;
+  }
+  .feature-info p {
+    font-size: var(--text-body);
+  }
+  .feature-screenshot {
+    width: 240px;
+    border-radius: 20px;
+    box-shadow: var(--shadow-md);
+    border: 2px solid var(--color-outline-variant);
+    margin: 0 auto;
+    display: block;
+  }
+
+  .scenario-disclaimer {
+    margin-top: 1.5rem;
+    font-size: var(--text-xs);
+    color: var(--color-outline);
+    text-align: center;
+    font-style: italic;
+  }
+
+  /* Cross-sell */
+  .cross-sell {
+    padding: var(--space-section) 0;
+  }
+  .cross-sell-card {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding: 3rem;
+    border-radius: var(--radius-xl);
+    background: var(--color-surface-variant);
+    border: 1px solid var(--color-outline-variant);
+  }
+  .cross-sell-icon {
+    width: 64px;
+    height: 64px;
+    border-radius: 16px;
+    background: var(--color-brand);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  .cross-sell-icon-svg {
+    width: 40px;
+    height: 40px;
+    filter: brightness(0) invert(1);
+  }
+  .cross-sell-content h2 {
+    font-size: var(--text-h3);
+    margin-bottom: 0.375rem;
+  }
+  .cross-sell-content p {
+    font-size: var(--text-sm);
     color: var(--color-on-surface-variant);
     margin-bottom: 1rem;
   }
-  .cta-link {
-    font-weight: 600;
-    color: var(--color-primary);
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .hero-top {
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+    .hero-text {
+      align-items: center;
+    }
+    .phone-frame {
+      width: 200px;
+    }
+    .scenario-inner,
+    .scenario-reverse {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      direction: ltr;
+    }
+    .feature-grid {
+      grid-template-columns: 1fr;
+    }
+    .feature-card-inner {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+    .cross-sell-card {
+      flex-direction: column;
+      text-align: center;
+      padding: 2rem;
+    }
   }
 </style>
