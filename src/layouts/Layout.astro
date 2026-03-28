@@ -2,9 +2,19 @@
 interface Props {
   title: string;
   description?: string;
+  ogImage?: string;
+  ogType?: string;
 }
 
-const { title, description = "KIKU — Audio tools for Android. Listen smarter. Record safely." } = Astro.props;
+const {
+  title,
+  description = "KIKU — Audio tools for Android. Listen smarter. Record safely.",
+  ogImage = "/images/og-default.jpg",
+  ogType = "website",
+} = Astro.props;
+
+const canonicalUrl = new URL(Astro.url.pathname, Astro.site);
+const ogImageUrl = new URL(ogImage, Astro.site);
 ---
 
 <!doctype html>
@@ -13,11 +23,43 @@ const { title, description = "KIKU — Audio tools for Android. Listen smarter. 
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content={description} />
+    <meta name="theme-color" content="#E8820C" />
+    <link rel="canonical" href={canonicalUrl.href} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/favicon.svg" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImageUrl.href} />
+    <meta property="og:url" content={canonicalUrl.href} />
+    <meta property="og:type" content={ogType} />
+    <meta property="og:site_name" content="KIKU" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImageUrl.href} />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display&display=swap" rel="stylesheet" />
     <title>{title}</title>
+
+    <!-- Structured Data: Organization -->
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "KIKU",
+      "url": "https://kiku-app.com",
+      "logo": "https://kiku-app.com/favicon.svg",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "contact@sparrowwharfe.com",
+        "contactType": "customer support"
+      }
+    })} />
   </head>
   <body>
     <nav class="nav" id="nav">

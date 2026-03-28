@@ -3,7 +3,18 @@ import Layout from '../layouts/Layout.astro';
 import '../styles/global.css';
 ---
 
-<Layout title="KIKU Studio — Offline-First Podcast Studio for Android" description="Record, anonymize voices, and share — all on your Android phone. On-device AI noise reduction. Built for journalists who need privacy.">
+<Layout title="KIKU Studio — Offline-First Podcast Studio for Android" description="Record, anonymize voices, and share — all on your Android phone. On-device AI noise reduction. Built for journalists who need privacy." ogImage="/images/screenshot-studio-main.jpg">
+
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "KIKU Studio",
+    "operatingSystem": "Android",
+    "applicationCategory": "MultimediaApplication",
+    "description": "Record, anonymize voices, and share — all on your Android phone. On-device AI noise reduction. Built for journalists who need privacy.",
+    "inLanguage": ["en", "hi", "id"],
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+  })} />
 
   <!-- Hero -->
   <section class="hero">
@@ -48,7 +59,7 @@ import '../styles/global.css';
           </div>
         </div>
         <div class="scenario-image">
-          <img src="/images/persona-daniel.jpg" alt="Daniel recording interview" class="scenario-photo" />
+          <img src="/images/persona-daniel.jpg" alt="Daniel recording interview" class="scenario-photo" loading="lazy" width="200" height="200" />
         </div>
       </div>
     </div>
@@ -109,11 +120,11 @@ import '../styles/global.css';
               <div class="denoise-compare">
                 <div class="denoise-half">
                   <span class="denoise-label">Before</span>
-                  <img src="/images/screenshot-denoise-before.jpg" alt="Noisy audio waveform" class="denoise-img" />
+                  <img src="/images/screenshot-denoise-before.jpg" alt="Noisy audio waveform" class="denoise-img" loading="lazy" />
                 </div>
                 <div class="denoise-half">
                   <span class="denoise-label">After</span>
-                  <img src="/images/screenshot-denoise-after.jpg" alt="Clean audio waveform" class="denoise-img" />
+                  <img src="/images/screenshot-denoise-after.jpg" alt="Clean audio waveform" class="denoise-img" loading="lazy" />
                 </div>
               </div>
             </div>
@@ -135,7 +146,7 @@ import '../styles/global.css';
         <div class="feature-card feature-wide">
           <div class="feature-card-inner feature-card-inner-reverse">
             <div class="feature-visual">
-              <img src="/images/screenshot-studio-transcription.jpg" alt="On-device transcription" class="feature-screenshot" />
+              <img src="/images/screenshot-studio-transcription.jpg" alt="On-device transcription" class="feature-screenshot" loading="lazy" width="240" height="520" />
             </div>
             <div class="feature-info">
               <h3>Transcription</h3>
@@ -165,7 +176,7 @@ import '../styles/global.css';
     <div class="container">
       <div class="scenario-inner">
         <div class="scenario-image">
-          <img src="/images/persona-priya.jpg" alt="Priya recording at Mumbai market" class="scenario-photo" />
+          <img src="/images/persona-priya.jpg" alt="Priya recording at Mumbai market" class="scenario-photo" loading="lazy" width="200" height="200" />
         </div>
         <div class="scenario-content">
           <div class="scenario-label">Mobile-first podcasting</div>

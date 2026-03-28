@@ -3,7 +3,18 @@ import Layout from '../layouts/Layout.astro';
 import '../styles/global.css';
 ---
 
-<Layout title="KIKU Player — Smart Audio Intelligence for Android" description="Listen to any audio, understand it with AI, and share what matters. Smart Speed, AI summaries, transcripts, and Q&A.">
+<Layout title="KIKU Player — Smart Audio Intelligence for Android" description="Listen to any audio, understand it with AI, and share what matters. Smart Speed, AI summaries, transcripts, and Q&A." ogImage="/images/screenshot-player-main.jpg">
+
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "KIKU Player",
+    "operatingSystem": "Android",
+    "applicationCategory": "MultimediaApplication",
+    "description": "Listen to any audio, understand it with AI, and share what matters. Smart Speed, AI summaries, transcripts, and Q&A.",
+    "inLanguage": ["en", "ja"],
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+  })} />
 
   <!-- Hero -->
   <section class="hero">
@@ -38,7 +49,7 @@ import '../styles/global.css';
     <div class="container">
       <div class="scenario-inner">
         <div class="scenario-image">
-          <img src="/images/persona-yuki.jpg" alt="Yuki listening on Tokyo commute" class="scenario-photo" />
+          <img src="/images/persona-yuki.jpg" alt="Yuki listening on Tokyo commute" class="scenario-photo" loading="lazy" width="200" height="200" />
         </div>
         <div class="scenario-content">
           <div class="scenario-label">Commute listening</div>
@@ -69,7 +80,7 @@ import '../styles/global.css';
               <p>Read along as you listen with synchronized highlighting. Tap any line to jump to that moment. Share specific segments as text with one tap.</p>
             </div>
             <div class="feature-visual">
-              <img src="/images/screenshot-player-transcript.jpg" alt="Live transcript with sync highlighting" class="feature-screenshot" />
+              <img src="/images/screenshot-player-transcript.jpg" alt="Live transcript with sync highlighting" class="feature-screenshot" loading="lazy" width="240" height="520" />
             </div>
           </div>
         </div>
@@ -122,7 +133,7 @@ import '../styles/global.css';
           </div>
         </div>
         <div class="scenario-image">
-          <img src="/images/persona-amirah.jpg" alt="Amirah at desk with phone" class="scenario-photo" />
+          <img src="/images/persona-amirah.jpg" alt="Amirah at desk with phone" class="scenario-photo" loading="lazy" width="200" height="200" />
         </div>
       </div>
       <p class="scenario-disclaimer">Names, portraits, and quotes are fictional, created to illustrate real-world use cases. Images generated with AI.</p>
