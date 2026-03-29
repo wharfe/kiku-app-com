@@ -80,20 +80,22 @@ const ogImageUrl = new URL(ogImage, Astro.site);
     </main>
     <footer class="footer">
       <div class="footer-inner">
-        <div class="footer-brand">
-          <span class="footer-logo">KIKU</span>
-          <p class="footer-tagline">Audio tools for Android.<br/>Listen smarter. Record safely.</p>
-        </div>
-        <div class="footer-grid">
-          <div class="footer-col">
-            <h4>Products</h4>
-            <a href="/player">KIKU Player</a>
-            <a href="/studio">KIKU Studio</a>
+        <div class="footer-top">
+          <div class="footer-brand">
+            <span class="footer-logo">KIKU</span>
+            <p class="footer-tagline">Audio tools for Android.<br/>Listen smarter. Record safely.</p>
           </div>
-          <div class="footer-col">
-            <h4>Company</h4>
-            <a href="/privacy">Privacy Policy</a>
-            <a href="mailto:contact@sparrowwharfe.com">Contact</a>
+          <div class="footer-grid">
+            <div class="footer-col">
+              <h4>Products</h4>
+              <a href="/player">KIKU Player</a>
+              <a href="/studio">KIKU Studio</a>
+            </div>
+            <div class="footer-col">
+              <h4>Company</h4>
+              <a href="/privacy">Privacy Policy</a>
+              <a href="mailto:contact@sparrowwharfe.com">Contact</a>
+            </div>
           </div>
         </div>
         <div class="footer-bottom">
@@ -194,8 +196,14 @@ const ogImageUrl = new URL(ogImage, Astro.site);
     margin: 0 auto;
     padding: 3rem 1.5rem 2rem;
   }
+  .footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 2.5rem;
+  }
   .footer-brand {
-    margin-bottom: 2rem;
+    /* no margin — flex handles spacing */
   }
   .footer-logo {
     font-family: var(--font-body);
@@ -213,7 +221,6 @@ const ogImageUrl = new URL(ogImage, Astro.site);
   .footer-grid {
     display: flex;
     gap: 4rem;
-    margin-bottom: 2.5rem;
   }
   .footer-col {
     display: flex;
@@ -248,6 +255,10 @@ const ogImageUrl = new URL(ogImage, Astro.site);
   @media (max-width: 640px) {
     .nav-links {
       gap: 1.25rem;
+    }
+    .footer-top {
+      flex-direction: column;
+      gap: 2rem;
     }
     .footer-grid {
       gap: 2.5rem;
