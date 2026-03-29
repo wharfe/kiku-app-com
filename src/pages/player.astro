@@ -77,7 +77,7 @@ import '../styles/global.css';
           <div class="feature-card-inner">
             <div class="feature-info">
               <h3>Live Transcripts</h3>
-              <p>Read along as you listen with synchronized highlighting. Tap any line to jump to that moment. Share specific segments as text with one tap.</p>
+              <p>Read along as you listen with synchronized highlighting. Tap any line to jump to that moment. Long-press any segment to share with a timestamp link.</p>
             </div>
             <div class="feature-visual">
               <img src="/images/screenshot-player-transcript.jpg" alt="Live transcript with sync highlighting" class="feature-screenshot" loading="lazy" width="240" height="520" />
@@ -105,6 +105,12 @@ import '../styles/global.css';
 
         <div class="feature-card">
           <div class="feature-accent"></div>
+          <h3>AI Chapters</h3>
+          <p>Auto-generate chapter markers for episodes that don't have them. Native Podcast 2.0 chapter support built in.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-accent"></div>
           <h3>Import Any Audio</h3>
           <p>Receive audio from Telegram, WhatsApp, or any app via Share. Transcribe with Whisper and unlock all AI features on any audio file.</p>
         </div>
@@ -112,7 +118,7 @@ import '../styles/global.css';
         <div class="feature-card">
           <div class="feature-accent"></div>
           <h3>Open Ecosystem</h3>
-          <p>Subscribe via RSS, Podcast Index, or OPML import. Your podcasts, not locked to any platform. Export anytime.</p>
+          <p>Subscribe via RSS or Podcast Index. Import your subscriptions with OPML. Your podcasts, not locked to any platform.</p>
         </div>
       </div>
     </div>
@@ -137,6 +143,56 @@ import '../styles/global.css';
         </div>
       </div>
       <p class="scenario-disclaimer">Names, portraits, and quotes are fictional, created to illustrate real-world use cases. Images generated with AI.</p>
+    </div>
+  </section>
+
+  <!-- All Features -->
+  <section class="all-features">
+    <div class="container">
+      <div class="section-divider"></div>
+      <h2 class="section-title">Everything in KIKU Player</h2>
+      <div class="all-features-grid">
+        <div class="af-group">
+          <h4>Playback</h4>
+          <ul>
+            <li>Smart Speed (auto silence trimming)</li>
+            <li>Per-podcast playback speed</li>
+            <li>Voice Boost EQ</li>
+            <li>Sleep timer</li>
+            <li>Customizable skip intervals</li>
+            <li>Android Auto support</li>
+          </ul>
+        </div>
+        <div class="af-group">
+          <h4>AI & Transcripts</h4>
+          <ul>
+            <li>Synchronized live transcripts</li>
+            <li>AI summaries & Q&A (Claude)</li>
+            <li>AI chapter generation</li>
+            <li>Podcast 2.0 chapters</li>
+            <li>Share segments with timestamps</li>
+          </ul>
+        </div>
+        <div class="af-group">
+          <h4>Library</h4>
+          <ul>
+            <li>RSS & Podcast Index search</li>
+            <li>OPML import / export</li>
+            <li>Smart Playlists with filters</li>
+            <li>Play history</li>
+            <li>Import audio from any app</li>
+          </ul>
+        </div>
+        <div class="af-group">
+          <h4>Platform</h4>
+          <ul>
+            <li>Material Design 3 & Dynamic Color</li>
+            <li>English & Japanese UI</li>
+            <li>Free, no ads</li>
+            <li>Android 8.0+</li>
+          </ul>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -402,6 +458,39 @@ import '../styles/global.css';
     margin-bottom: 1rem;
   }
 
+  /* All Features */
+  .all-features {
+    padding: var(--space-section) 0;
+    background: var(--color-surface-variant);
+  }
+  .all-features-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+  }
+  .af-group h4 {
+    font-size: var(--text-body-lg);
+    font-weight: 700;
+    color: var(--color-on-surface);
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--color-brand);
+  }
+  .af-group ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .af-group li {
+    font-size: var(--text-sm);
+    color: var(--color-on-surface-variant);
+    padding: 0.375rem 0;
+    border-bottom: 1px solid var(--color-outline-variant);
+  }
+  .af-group li:last-child {
+    border-bottom: none;
+  }
+
   /* Responsive */
   @media (max-width: 768px) {
     .hero-top {
@@ -426,6 +515,9 @@ import '../styles/global.css';
     .feature-card-inner {
       grid-template-columns: 1fr;
       gap: 1.5rem;
+    }
+    .all-features-grid {
+      grid-template-columns: repeat(2, 1fr);
     }
     .cross-sell-card {
       flex-direction: column;
