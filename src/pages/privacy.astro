@@ -18,8 +18,11 @@ import '../styles/global.css';
     <h3>KIKU (Podcast Player)</h3>
     <ul>
       <li><strong>Podcast subscriptions and playback data</strong> — stored locally on your device only. We do not sync, upload, or access your subscription list.</li>
-      <li><strong>Podcast search queries</strong> — sent to the Podcast Index API to return search results. We do not log or store these queries.</li>
-      <li><strong>AI summaries (optional)</strong> — if you use the AI summary feature, episode metadata may be sent to a third-party AI provider (Anthropic Claude API). This feature requires you to provide your own API key (BYOK). We never see or store your API key on our servers.</li>
+      <li><strong>Podcast search and discovery</strong> — search queries are sent to the Apple iTunes Search API. Trending podcasts are fetched from the Apple RSS Marketing Tools API using your device's country code. We do not log or store these queries.</li>
+      <li><strong>Podcast feeds</strong> — your subscribed podcast feed URLs are fetched directly from their publishers' servers to retrieve episode listings. No intermediary server is involved.</li>
+      <li><strong>AI summaries and chapters (optional)</strong> — if you use AI features, episode transcript text (up to 30,000 characters) is sent to the Anthropic Claude API. This requires your own API key (BYOK).</li>
+      <li><strong>Transcription (optional)</strong> — if you use the Whisper transcription feature, episode audio is sent to the OpenAI Whisper API. This requires your own API key (BYOK).</li>
+      <li><strong>Ads</strong> — KIKU displays ads via Google AdMob. Ad personalization is subject to your consent choice (GDPR/UMP). You can remove ads with a one-time purchase.</li>
     </ul>
 
     <h3>KIKU Studio (Podcast Studio)</h3>
@@ -77,22 +80,34 @@ import '../styles/global.css';
       </thead>
       <tbody>
         <tr>
-          <td>Podcast Index API</td>
-          <td>Podcast search & discovery (KIKU)</td>
-          <td>Search queries</td>
+          <td>Apple iTunes Search API</td>
+          <td>Podcast search (KIKU)</td>
+          <td>Search queries, country code</td>
           <td>For search only</td>
         </tr>
         <tr>
+          <td>Apple RSS Marketing Tools</td>
+          <td>Trending podcasts (KIKU)</td>
+          <td>Country code</td>
+          <td>For discovery only</td>
+        </tr>
+        <tr>
           <td>OpenAI Whisper API</td>
-          <td>Transcription (KIKU Studio)</td>
+          <td>Transcription (both apps)</td>
           <td>Audio data + your API key</td>
           <td>Optional (BYOK)</td>
         </tr>
         <tr>
           <td>Anthropic Claude API</td>
-          <td>AI summaries (KIKU)</td>
-          <td>Episode metadata + your API key</td>
+          <td>AI summaries &amp; chapters (KIKU)</td>
+          <td>Transcript text + your API key</td>
           <td>Optional (BYOK)</td>
+        </tr>
+        <tr>
+          <td>Google AdMob</td>
+          <td>Ads (KIKU)</td>
+          <td>Ad requests, consent state</td>
+          <td>Consent-based; removable via purchase</td>
         </tr>
         <tr>
           <td>Firebase Crashlytics</td>
