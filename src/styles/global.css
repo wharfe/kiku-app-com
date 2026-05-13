@@ -281,6 +281,18 @@ img {
   transform: translateY(-2px);
 }
 
+.play-badge {
+  display: inline-block;
+  transition: transform var(--duration-fast) var(--ease-out);
+}
+.play-badge img {
+  display: block;
+  height: auto;
+}
+.play-badge:hover {
+  transform: translateY(-2px);
+}
+
 /* Section divider */
 .section-divider {
   width: 48px;
