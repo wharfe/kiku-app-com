@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import '../styles/global.css';
+import { playStoreUrl } from '../lib/playstore';
 ---
 
 <Layout title="KIKU Studio — Offline-First Podcast Studio for Android" description="Record, anonymize voices, and share — all on your Android phone. On-device AI noise reduction. Built for journalists who need privacy." ogImage="/images/screenshot-studio-main.jpg">
@@ -32,7 +33,7 @@ import '../styles/global.css';
             and helps protect your sources' identity.
           </p>
           <div class="hero-cta animate-fade-up delay-4">
-            <a class="play-badge" href="https://play.google.com/store/apps/details?id=com.wharfe.kikustudio" target="_blank" rel="noopener" aria-label="Get KIKU Studio on Google Play">
+            <a class="play-badge" href={playStoreUrl('studio', 'lp-studio-hero')} target="_blank" rel="noopener" aria-label="Get KIKU Studio on Google Play">
               <img src="/images/google-play-badge.png" alt="Get it on Google Play" width="200" height="77" />
             </a>
           </div>

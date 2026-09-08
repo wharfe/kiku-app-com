@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import '../styles/global.css';
+import { playStoreUrl } from '../lib/playstore';
 ---
 
 <Layout title="KIKU Player — Smart Audio Intelligence for Android" description="Listen to any audio, understand it with AI, and share what matters. Smart Speed, AI summaries, transcripts, and Q&A." ogImage="/images/screenshot-player-main.jpg">
@@ -32,7 +33,7 @@ import '../styles/global.css';
             understand it with AI, and share key insights with your team.
           </p>
           <div class="hero-cta animate-fade-up delay-4">
-            <a class="play-badge" href="https://play.google.com/store/apps/details?id=io.github.wharfe.kiku" target="_blank" rel="noopener" aria-label="Get KIKU Player on Google Play">
+            <a class="play-badge" href={playStoreUrl('player', 'lp-player-hero')} target="_blank" rel="noopener" aria-label="Get KIKU Player on Google Play">
               <img src="/images/google-play-badge.png" alt="Get it on Google Play" width="200" height="77" />
             </a>
           </div>
