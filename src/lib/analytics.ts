@@ -8,6 +8,6 @@
 // Property: "kiku-app" (web only). The app-side property named "kiku-studio"
 // carries the Android streams for BOTH apps and deliberately stays separate,
 // so that neither report needs a platform filter to be readable.
-export const GA_MEASUREMENT_ID = '';
+export const GA_MEASUREMENT_ID = 'G-6D56YXW8F4';
 
 export const analyticsEnabled = GA_MEASUREMENT_ID !== '';
