@@ -1,4 +1,6 @@
 ---
+import { GA_MEASUREMENT_ID, analyticsEnabled } from '../lib/analytics';
+
 interface Props {
   title: string;
   description?: string;
@@ -60,6 +62,30 @@ const ogImageUrl = new URL(ogImage, Astro.site);
         "contactType": "customer support"
       }
     })} />
+
+    {analyticsEnabled && (
+      <>
+        <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}></script>
+        <script is:inline define:vars={{ GA_MEASUREMENT_ID }}>
+          window.dataLayer = window.dataLayer || [];
+          function gtag() { dataLayer.push(arguments); }
+          gtag('js', new Date());
+          gtag('config', GA_MEASUREMENT_ID);
+
+          // The Play badge is the only conversion point on this site. Report it
+          // with the same app/campaign pair the link carries in its Play install
+          // referrer, so the click here and the install there can be lined up.
+          document.addEventListener('click', function (event) {
+            var badge = event.target.closest('a.play-badge');
+            if (!badge) return;
+            gtag('event', 'click_play_badge', {
+              app: badge.dataset.app,
+              campaign: badge.dataset.campaign,
+            });
+          });
+        </script>
+      </>
+    )}
   </head>
   <body>
     <nav class="nav" id="nav">
