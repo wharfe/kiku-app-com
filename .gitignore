@@ -17,6 +17,11 @@ pnpm-debug.log*
 .env
 .env.production
 
+# exported Figma screenshots (regenerate with: node feature-graphics/export-figma-screenshots.mjs)
+feature-graphics/screenshots/
+# generated tablet screenshots (regenerate with: node feature-graphics/generate-tablet-screenshots.mjs)
+feature-graphics/tablet-screenshots/
+
 # macOS-specific files
 .DS_Store
 

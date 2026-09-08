@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 1024px;
+    height: 500px;
+    overflow: hidden;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  }
+  .canvas {
+    width: 1024px;
+    height: 500px;
+    background: linear-gradient(135deg, #FFB870 0%, #E8820C 60%, #C46A00 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 48px;
+    padding: 0 100px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* Subtle decorative circles */
+  .canvas::before {
+    content: '';
+    position: absolute;
+    top: -120px;
+    right: -80px;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.06);
+  }
+  .canvas::after {
+    content: '';
+    position: absolute;
+    bottom: -150px;
+    left: -60px;
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.04);
+  }
+
+  .icon-section {
+    flex-shrink: 0;
+    position: relative;
+    z-index: 1;
+  }
+  .icon-section img {
+    width: 220px;
+    height: 220px;
+    border-radius: 44px;
+    box-shadow: 0 12px 40px rgba(0,0,0,0.25);
+  }
+
+  .text-section {
+    position: relative;
+    z-index: 1;
+  }
+  .app-name {
+    font-size: 64px;
+    font-weight: 800;
+    color: #FFFFFF;
+    letter-spacing: -1px;
+    line-height: 1.1;
+    text-shadow: 0 2px 12px rgba(0,0,0,0.15);
+  }
+  .app-name span {
+    font-weight: 400;
+    opacity: 0.9;
+  }
+  .tagline {
+    font-size: 24px;
+    font-weight: 500;
+    color: rgba(255,255,255,0.92);
+    margin-top: 14px;
+    letter-spacing: 0.3px;
+    line-height: 1.4;
+    text-shadow: 0 1px 6px rgba(0,0,0,0.1);
+  }
+  .badge {
+    display: inline-block;
+    margin-top: 18px;
+    padding: 6px 16px;
+    background: rgba(255,255,255,0.18);
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 20px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #FFFFFF;
+    letter-spacing: 0.5px;
+  }
+</style>
+</head>
+<body>
+  <div class="canvas">
+    <div class="icon-section">
+      <img src="../icon-concepts/player-resources/kiku_player_512.png" alt="KIKU Player" />
+    </div>
+    <div class="text-section">
+      <div class="app-name">KIKU <span>Player</span></div>
+      <div class="tagline">Listen. Understand. Share what matters.</div>
+      <div class="badge">Audio Intelligence for Android</div>
+    </div>
+  </div>
+</body>
+</html>

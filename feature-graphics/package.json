@@ -1,0 +1,10 @@
+{
+  "name": "kiku-feature-graphics",
+  "private": true,
+  "type": "module",
+  "description": "Local-only tooling for Play Store assets. Deliberately separate from the site package.json so the deploy build never installs a browser.",
+  "dependencies": {
+    "playwright": "^1.58.2",
+    "sharp": "^0.34.5"
+  }
+}
